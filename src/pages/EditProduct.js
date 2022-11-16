@@ -1,15 +1,14 @@
 import React from "react"
 import {Bar} from '../components/Bar';
-import { ListProducts } from "../components/ListProducts";
+import { FormEditProduct } from "../components/FormEditProduct";
 import '../App.css';
 
 
-export const Admin = () =>{
+export const EditProduct = () =>{
     return (
         <>
         <Bar/>
-        <ListProducts/>
+        <FormEditProduct/>
         </>
     )
 }
-

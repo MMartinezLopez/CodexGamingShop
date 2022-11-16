@@ -1,52 +1,49 @@
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 12px;
+  font-family: 'Calibri';
 }
 
 .topbar {
   z-index: 5;
-  width:90%;
+  width: 90%;
   height: 60px;
-  position:fixed;
+  position: fixed;
   background-color: black;
   top: 0%;
   left: 5%;
   border-radius: 0 0 0 0;
   text-align: center;
-  
+  display: inline-block;
+
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 90px;
 }
 
 /* BOTONES NAVEGACION */
 .navigation {
+  align-self: center;
   color: white;
-  font-size: 0.8em;
   text-align: center;
   width: 100%;
-  padding: 2px;
-  
-  display: inline-block;
+  font-size: 14px;
+  display: inline-flex;
 }
 
-.navigation a:link,
-a:visited {
-  width: 70%;
-  margin-top: 2%;
-  color: #40b988;
-  background-color: black;
-  padding: 5px;
-  text-transform: uppercase;
-  text-decoration: none;
+.login{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
 }
 
-.navigation a:hover {
-  letter-spacing: 1px;
-  background-color: #40b988;
-  color: black;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+.content{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
 }
