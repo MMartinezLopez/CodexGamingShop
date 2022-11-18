@@ -24,12 +24,12 @@ const theme = createTheme({
     },
 });
 
-export const Cliente = (cliente) => {
+export const Cliente = ({cliente}) => {
     return (
         <ThemeProvider theme={theme}>
             <Card sx={{ width: '100%', height: '200px', margin: '5px', display: 'flex', p: 2 }}>
                 <CardContent sx={{ width: '80%', display: "flex", flexDirection: "column", justifyContent: "center", textAlign: 'left' }}>
-                    <Typography variant="subtitle1" component="div">
+                    <Typography variant="subtitle1" color="text.secondary">
                         NOMBRE:{cliente.nombre}
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary">

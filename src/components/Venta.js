@@ -21,23 +21,20 @@ const theme = createTheme({
     },
 });
 
-export const Venta = (venta) => {
+export const Venta = ({venta}) => {
     return (
         <ThemeProvider theme={theme}>
             <Card sx={{ width: '100%', height: '150px', margin: '5px', display: 'flex', p: 2 }}>
                 <CardContent sx={{ width: '40%', display: "flex", flexDirection: "column", justifyContent: "center", textAlign: 'center' }}>
                     <Typography gutterBottom variant="h6" component="div">
-                        Cliente: {venta.idCliente}
+                        Cliente: {venta.cliente}
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary">
                         Fecha: {venta.fecha}
                     </Typography>
-                </CardContent>
-                <CardContent sx={{ width: '30%', display: "flex", flexDirection: "column", justifyContent: "center", textAlign: 'center' }}>
-                    {venta.productos.map((producto) => <Typography variant="subtitle2" component="div">{producto.producto} x {producto.cantidad}</Typography>)}
-                </CardContent>
+                </CardContent>                
                 <CardActions sx={{ textAlign: 'center', fontSize: 10, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                    <Typography variant='h5' component='div'>$ {venta.total}</Typography>
+                    <Typography variant='h5' component='div'>$ {venta.valor}</Typography>
                 </CardActions>
             </Card>
         </ThemeProvider>
