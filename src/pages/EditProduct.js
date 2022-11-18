@@ -1,5 +1,4 @@
-import React from "react"
-import {Bar} from '../components/Bar';
+import React from "react";
 import { FormEditProduct } from "../components/FormEditProduct";
 import '../App.css';
 
@@ -7,7 +6,6 @@ import '../App.css';
 export const EditProduct = () =>{
     return (
         <>
-        <Bar/>
         <FormEditProduct/>
         </>
     )

@@ -33,8 +33,8 @@ export const LoginPage = () => {
                 }}>
                     <Link to='/'><Logo/></Link>
 
-                    <TextField size="small" id="outlined" label="Email" sx={{mt:1}} />
-                    <TextField size="small" id="outlined" label="Password" type="password" sx={{mt:2}}/>
+                    <TextField size="small" id="email" label="Email" sx={{mt:1}} />
+                    <TextField size="small" id="password" label="Password" type="password" sx={{mt:2}}/>
 
                     <Button href="/admin" variant="outlined" endIcon={<Login />} sx={{mt:1}}>Log in</Button>
 

@@ -1,14 +1,14 @@
 import React from "react"
 import {Bar} from '../components/Bar';
 import '../App.css';
-import { ListaVentas } from "../components/ListaVentas";
+import { ListaClientes } from "../components/ListaClientes";
 
 
-export const Ventas = () =>{
+export const AdminClientes = () =>{
     return (
         <>
         <Bar/>
-        <ListaVentas/>
+        <ListaClientes/>
         </>
     )
 }

@@ -32,12 +32,12 @@ const theme = createTheme({
     },
 });
 
-const pages = [{ name: 'Carrito', link: '/cart' }, { name: 'Login', link: '/login' }];
+const pages = [{ name: 'Salir', link: '/' }];
 const settings = [
-{ name: 'Agregar', link: '/admin/add-product' },
-{ name: 'Editar', link: '/admin/edit-product' },
-{ name: 'Ventas', link: '/admin/sells' },
-{ name: 'Logout', link: '/'}
+    { name: 'Productos', link: '/admin/products' },
+    { name: 'Clientes', link: '/admin/clients' },
+    { name: 'Ventas', link: '/admin/sells' },
+    { name: 'Logout', link: '/' }
 ];
 
 
@@ -127,7 +127,7 @@ export const Bar = () => {
                             variant="h5"
                             noWrap
                             component="a"
-                            href=""
+                            href="/admin"
                             sx={{
                                 mr: 2,
                                 display: { xs: 'flex', md: 'none' },

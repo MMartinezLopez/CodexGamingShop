@@ -1,13 +1,13 @@
 import React from "react"
 import {BarClient} from '../components/BarClient';
-import { ListProducts } from "../components/ListProducts";
+import { Products } from "../components/Products";
 import '../App.css';
 
-export const Client = () => {
+export const Home = () => {
     return (
         <>
         <BarClient/>
-        <ListProducts/>
+        <Products/>
         </>
     )
 }
