@@ -4,7 +4,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-
+import axios from 'axios';
 import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '@mui/material';
 import Button from '@mui/material/Button';
@@ -23,6 +23,15 @@ const theme = createTheme({
         },
     },
 });
+
+const eliminar = (id) => {
+    axios.delete(`http://localhost:3050/productos/${id}`).then(res=>{
+            console.log(`Producto con id: ${id} eliminado`)
+            window.location.reload(true);
+        }).catch(err=>{
+            console.log(err)
+        })
+}
 
 export const Producto = ({ product }) => {
     return (
@@ -50,7 +59,7 @@ export const Producto = ({ product }) => {
                 />
                 <CardActions sx={{ width:'20%', textAlign: 'center', fontSize: 10, display: "flex", flexDirection: "column", justifyContent: "center" }}>
                 <Button href="/admin/edit-product" variant="contained" size='small' color='primary' endIcon={<Edit />} sx={{ m:1 }}>editar</Button>
-                <Button href="/admin/products"variant="contained" size='small' color='primary' endIcon={<Delete />} sx={{ m:1 }}>borrar</Button>
+                <Button title="Borrar producto" onClick={()=>{eliminar(product.id)}} variant="contained" size='small' color='primary' endIcon={<Delete />} sx={{ m:1 }}>borrar</Button>
                 </CardActions>
             </Card>
         </ThemeProvider>
