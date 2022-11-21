@@ -19,11 +19,13 @@ export const ListaClientes = () => {
     
 
 
-    const listaClientes=clientes.map(cliente=>{return(<div key={cliente.id}><Cliente cliente={cliente}/></div>)})
+    //const listaClientes=clientes.map(cliente=>{return(<div key={cliente.id}><Cliente cliente={cliente}/></div>)})
     
     return (
-        <Container maxWidth="md">
-            {listaClientes}
+        <Container maxWidth="sm">
+            {/*{listaClientes}*/}
+            {clientes.map(cliente=>(<div key={cliente.id}><Cliente cliente={cliente}/></div>))}
+
         </Container>
     )
 }

@@ -42,17 +42,21 @@ export const Producto = ({ product }) => {
         <ThemeProvider theme={theme}>
             <Card sx={{ width: '100%', height: '150px', margin: '5px', display: 'flex', p: 2 }}>
                 <CardContent sx={{ width: '80%', display: "flex", flexDirection: "column", justifyContent: "center", textAlign: 'left' }}>
-                    <Typography gutterBottom variant="h6" component="div">
-                        NOMBRE:{product.nombre}
+                <Typography textAlign={"center"} variant="h6" color="text.secondary">
+                        <strong>PRODUCTO ID-{product.id}</strong>
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary">
-                        DESCRIPCION:{product.descripcion}
+                    <strong>Nombre:</strong>
+                    {product.nombre}
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary">
-                        PRECIO: ${product.precio}
+                    <strong>Descripcion:</strong>{product.descripcion}
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary">
-                        STOCK: {product.existencia}
+                    <strong>Precio:</strong> ${product.precio}
+                    </Typography>
+                    <Typography variant="subtitle1" color="text.secondary">
+                    <strong>Stock:</strong> {product.existencia}
                     </Typography>
                 </CardContent>
                 <CardMedia

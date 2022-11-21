@@ -21,7 +21,7 @@ export const NuevoElemento = ({enlace,titulo}) => {
     return (
         <ThemeProvider theme={theme}>
             <div className="botonAgregar">
-                <Button href={enlace} title={titulo} variant="contained" size='large' color='primary' endIcon={<Add />} sx={{ p: "1" }}>Nuevo</Button>
+                <Button href={enlace} variant="contained" size='large' color='primary' endIcon={<Add />} sx={{ p: "1" }}>{titulo}</Button>
             </div>
         </ThemeProvider>
     )

@@ -10,6 +10,8 @@ import { LoginPage } from './components/Login';
 import { Cart } from './pages/Cart';
 import { AdminProductos } from './pages/AdminProductos';
 import { AdminClientes } from './pages/AdminClientes';
+import { AddClient } from './pages/AddClient';
+import { EditClient } from './pages/EditClient';
 
 const App = () => {
   return (<BrowserRouter>
@@ -19,10 +21,14 @@ const App = () => {
     <Route path='/admin' element={<Admin/>}/>
     <Route path='/cart' element={<Cart/>}/>
     <Route path='/admin/sells' element={<Ventas/>}/>
+    
+    <Route path='/admin/products' element={<AdminProductos/>}/>
     <Route path='/admin/add-product' element={<AddProduct/>}/>
     <Route path='/admin/edit-product/:id' element={<EditProduct/>}/>
-    <Route path='/admin/products' element={<AdminProductos/>}/>
+  
     <Route path='/admin/clients' element={<AdminClientes/>}/>
+    <Route path='/admin/add-client' element={<AddClient/>}/>
+    <Route path='/admin/edit-client/:id' element={<EditClient/>}/>
   </Routes>
   </BrowserRouter>)
 }
