@@ -33,6 +33,10 @@ const eliminar = (id) => {
         })
 }
 
+const obtener = (id) => {
+    window.location.replace(`/admin/edit-product/${id}`)
+}
+
 export const Producto = ({ product }) => {
     return (
         <ThemeProvider theme={theme}>
@@ -58,7 +62,7 @@ export const Producto = ({ product }) => {
                     sx={{ maxWidth:'150px',maxHeight:'100%', display:'block', p:1}}
                 />
                 <CardActions sx={{ width:'20%', textAlign: 'center', fontSize: 10, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                <Button href="/admin/edit-product" variant="contained" size='small' color='primary' endIcon={<Edit />} sx={{ m:1 }}>editar</Button>
+                <Button title="Editar producto" onClick={()=>{obtener(product.id)}} variant="contained" size='small' color='primary' endIcon={<Edit />} sx={{ m:1 }}>editar</Button>
                 <Button title="Borrar producto" onClick={()=>{eliminar(product.id)}} variant="contained" size='small' color='primary' endIcon={<Delete />} sx={{ m:1 }}>borrar</Button>
                 </CardActions>
             </Card>
