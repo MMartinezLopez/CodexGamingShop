@@ -24,24 +24,18 @@ const theme = createTheme({
 });
 
 
-export const Product = ({ product, carrito, setCarrito}) => {
-
-  const [count,setCount]=useState(1)
-
-  const addCarrito = (product) => {
-    setCount(count+1)
-    const cartItem={
+export const Product = ({ product }) => {
+const [detalles, setDetalles] = useState([])
+  const alCarrito = (product) => {
+    setDetalles([...detalles, {
       producto: product.id,
-      valorUnitario: product.precio,
-      cantidad:count
-    }
-    setCarrito([...carrito,cartItem])
-    console.log(cartItem)
+      valorUnitario: product.precio}])
+    console.log(detalles)
   }
-
+  
 
   return (
-
+    
     <ThemeProvider theme={theme}>
       <Card sx={{ width: '100%', height: '150px', margin: '5px', display: 'flex', p: 2 }}>
         <CardMedia
@@ -60,13 +54,11 @@ export const Product = ({ product, carrito, setCarrito}) => {
         </CardContent>
         <CardActions sx={{ textAlign: 'center', fontSize: 10, display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <Typography variant='h5' component='div'>$ {product.precio}</Typography>
-          <Button onClick={() => addCarrito(product)} variant="contained" size='large' color='primary' endIcon={<AddShoppingCartOutlined />}>comprar</Button>
+          <Button onClick={() => alCarrito(product)} variant="contained" size='large' color='primary' endIcon={<AddShoppingCartOutlined />}>comprar</Button>
         </CardActions>
       </Card>
     </ThemeProvider>
 
-
+    
   );
 }
-
-
