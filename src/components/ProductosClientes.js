@@ -44,7 +44,7 @@ export const ProductosClientes = () => {
     const [carrito, setCarrito] = useState([])
 
     const addCarrito = (product) => {
-        
+
         alert("Agregado al carrito")
         const productoExistente = carrito.find((item) => item.producto === product.id)
 
@@ -68,13 +68,13 @@ export const ProductosClientes = () => {
                 cantidad: 1
             }
             ])
-        
+
         }
     }
 
     const verCarrito = (carrito) => {
-        window.location.replace('/cart')
-            }
+        console.log(carrito)
+    }
 
     const listarProductos = productos.map(producto => {
         return (
