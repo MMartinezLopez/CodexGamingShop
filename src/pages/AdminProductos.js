@@ -8,7 +8,7 @@ import { NuevoElemento } from "../components/NuevoElemento";
 export const AdminProductos = () =>{
     return (
         <>
-        <NuevoElemento enlace="/admin/add-product" titulo="añadir producto"/>
+        <NuevoElemento enlace="/admin/add-product" titulo="nuevo producto"/>
         <Bar/>
         <ListaProductos/>
         </>

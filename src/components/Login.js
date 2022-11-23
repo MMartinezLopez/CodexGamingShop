@@ -21,7 +21,7 @@ const theme = createTheme({
 
 export const LoginPage = () => {
     return (
-        <div className="login">
+        <div className="formulario">
             <ThemeProvider theme={theme}>
                 <Card sx={{
                     width: 200,

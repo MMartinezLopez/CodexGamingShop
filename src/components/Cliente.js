@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { ThemeProvider } from '@emotion/react';
 import { createTheme} from '@mui/material';
 import Button from '@mui/material/Button';
-import { Delete, Edit } from '@mui/icons-material';
+import { AccountBox, Delete, Edit } from '@mui/icons-material';
 import axios from 'axios';
 
 
@@ -45,20 +45,20 @@ export const Cliente = ({ cliente }) => {
         <ThemeProvider theme={theme}>
             <Card sx={{ width: '100%', height: '300px', margin: '5px', display: 'flex', p: 2 }}>
                 <CardContent sx={{ width: '70%', display: "flex", flexDirection: "column", justifyContent: "center", textAlign: 'left' }}>
-                    <Typography textAlign={"center"} variant="h6" color="text.secondary">
-                        <strong>CLIENTE ID-{cliente.id}</strong>
+                    <Typography textAlign={"center"} variant="button" color="text.secondary">
+                        <AccountBox sx={{fontSize:14}}/> <strong>CLIENTE ID-{cliente.id}</strong>
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary">
-                        <strong>Nombre:</strong>{cliente.nombre}
+                        <strong>Nombre:</strong> {cliente.nombre}
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary">
-                        <strong>Apellido:</strong>{cliente.apellido}
+                        <strong>Apellido:</strong> {cliente.apellido}
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary">
                         <strong>Identificacion:</strong> {cliente.identificacion}
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary">
-                        <strong>Edad:</strong>{cliente.edad}
+                        <strong>Edad:</strong> {cliente.edad}
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary">
                         <strong>email:</strong> {cliente.correo}

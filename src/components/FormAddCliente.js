@@ -50,7 +50,7 @@ export const FormAddCliente = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <div className="login">
+            <div className="formulario">
                 <Card sx={{
                     width: 300,
                     height: 500,

@@ -18,7 +18,7 @@ export const ListaVentas = () => {
     
 
 
-    const listaVentas=ventas.map(venta=>{return(<div key={venta.id}><Venta venta={venta}/></div>)})
+    const listaVentas=ventas.map(venta=>{return(<div key={venta._id}><Venta venta={venta}/></div>)})
 
     return (
         <Container maxWidth="md">

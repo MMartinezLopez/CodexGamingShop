@@ -30,7 +30,7 @@ body {
   display: inline-flex;
 }
 
-.login{
+.formulario{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,7 @@ body {
 
 .botonAgregar{
   position: fixed;
-  margin-top: 80px;
-  margin-left: 10px;
+  margin-top: 100px;
+  margin-left: 20px;
 
 }

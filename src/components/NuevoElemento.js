@@ -1,4 +1,4 @@
-import { Add } from "@mui/icons-material";
+import { AddCircle } from "@mui/icons-material";
 import { Button, createTheme, ThemeProvider} from "@mui/material";
 import React from "react";
 import "../App.css"
@@ -21,7 +21,7 @@ export const NuevoElemento = ({enlace,titulo}) => {
     return (
         <ThemeProvider theme={theme}>
             <div className="botonAgregar">
-                <Button href={enlace} variant="contained" size='large' color='primary' endIcon={<Add />} sx={{ p: "1" }}>{titulo}</Button>
+                <Button href={enlace} variant="contained" color='primary' endIcon={<AddCircle />} sx={{ textAlign:"center",width:"150px", p: "1" }}>{titulo}</Button>
             </div>
         </ThemeProvider>
     )

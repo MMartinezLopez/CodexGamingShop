@@ -7,7 +7,7 @@ import { ListaClientes } from "../components/ListaClientes";
 export const AdminClientes = () =>{
     return (
         <>
-        <NuevoElemento enlace="/admin/add-client" titulo="Añadir cliente"/>
+        <NuevoElemento enlace="/admin/add-client" titulo="agregar cliente"/>
         <Bar/>
         <ListaClientes/>
         </>

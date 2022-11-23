@@ -8,7 +8,7 @@ import axios from 'axios';
 import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '@mui/material';
 import Button from '@mui/material/Button';
-import { Delete, Edit } from '@mui/icons-material';
+import { Delete, Edit, InventoryOutlined } from '@mui/icons-material';
 
 const theme = createTheme({
     palette: {
@@ -42,8 +42,8 @@ export const Producto = ({ product }) => {
         <ThemeProvider theme={theme}>
             <Card sx={{ width: '100%', height: '150px', margin: '5px', display: 'flex', p: 2 }}>
                 <CardContent sx={{ width: '80%', display: "flex", flexDirection: "column", justifyContent: "center", textAlign: 'left' }}>
-                <Typography textAlign={"center"} variant="h6" color="text.secondary">
-                        <strong>PRODUCTO ID-{product.id}</strong>
+                <Typography textAlign={"center"} variant="button" color="text.secondary">
+                        <InventoryOutlined sx={{fontSize:16}}/> <strong>PRODUCTO ID-{product.id}</strong>
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary">
                     <strong>Nombre:</strong>

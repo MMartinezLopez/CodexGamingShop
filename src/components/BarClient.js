@@ -30,7 +30,7 @@ const theme = createTheme({
     },
 });
 
-const pages = [{ name: 'Carrito', link: '/cart' }, { name: 'Login', link: '/login' }];
+const pages = [{ name: 'Iniciar sesion', link: '/login' }];
 
 
 
@@ -116,7 +116,7 @@ export const BarClient = () => {
                             variant="h5"
                             noWrap
                             component="a"
-                            href=""
+                            href="/"
                             sx={{
                                 mr: 2,
                                 display: { xs: 'flex', md: 'none' },
