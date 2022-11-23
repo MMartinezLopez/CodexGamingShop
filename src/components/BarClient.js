@@ -30,7 +30,7 @@ const theme = createTheme({
     },
 });
 
-const pages = [{ name: 'Iniciar sesion', link: '/login' }];
+const pages = [{ name: 'carrito', link: '/cart' },{ name: 'Iniciar sesion', link: '/login' }];
 
 
 

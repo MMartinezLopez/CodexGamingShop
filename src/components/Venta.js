@@ -25,7 +25,9 @@ export const Venta = ({ venta }) => {
 
 
     const listaDetalles = venta.detalles.map((detalle, index) => {
-        return (<Typography noWrap variant='overline' color="text.secondary" sx={{ fontSize: '9px' }} component="div" key={index}>{detalle.producto.nombre} x {detalle.cantidad}</Typography>)
+        return (<Typography noWrap variant='overline' color="text.secondary" sx={{ fontSize: '9px' }} component="div" key={index}>
+            {detalle.producto.nombre} x {detalle.cantidad}
+            </Typography>)
     })
 
     return (

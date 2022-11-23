@@ -110,6 +110,7 @@ export const ProductosClientes = () => {
                 <Tooltip placement="bottom" title='Click para ver carrito'>
                     <Button onClick={() => verCarrito(carrito)} size='large' variant='contained' endIcon={<ShoppingCart />}>carrito ({carrito.length})</Button>
                 </Tooltip>
+                
             </div>
             <Container maxWidth="md">
                 {listarProductos}
